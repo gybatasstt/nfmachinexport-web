@@ -1,0 +1,547 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #006400, #228B22);
+  color: #ffffff;
+  text-align: center;
+  padding: 25px;
+  animation: fadeInDown 1s ease;
+}
+header img {
+  max-width: 280px;   /* Logo grande */
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+header img:hover {
+  transform: scale(1.05);
+}
+header h1 {
+  font-size: 2.2em;
+  margin: 5px 0;
+  font-weight: bold;
+}
+header p {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+nav ul li a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+/* Botones de idioma */
+.idiomas {
+  margin-top: 10px;
+}
+.idiomas button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #004466;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.idiomas button:hover {
+  background-color: #006699;
+  transform: scale(1.05);
+}
+
+/* Secciones */
+section {
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  animation: fadeInUp 1s ease;
+}
+section h2 {
+  color: #006400;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+section h2:hover {
+  color: #228B22;
+}
+section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1em;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+}
+blockquote {
+  font-style: italic;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+blockquote:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Formulario */
+.info-contacto {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  margin-top: 15px;
+  background-color: #004466;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+form button:hover {
+  background-color: #006699;
+  transform: scale(1.05);
+}
+
+/* Botones de contacto (WhatsApp) */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.whatsapp-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeInUp 1s ease;
+}
+.whatsapp-icon-btn .icon {
+  width: 32px;   /* Íconos proporcionados */
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+.whatsapp-icon-btn .icon:hover {
+  transform: scale(1.2);
+}
+.whatsapp-label {
+  font-weight: bold;
+  color: #004466;
+  font-size: 14px;
+}
+
+/* Blog */
+#blog p {
+  font-size: 1em;
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #004466;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #fff;
+  animation: fadeInUp 1s ease;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive (móviles y tablets) */
+@media (max-width: 768px) {
+  header img {
+    max-width: 200px; /* Logo más pequeño en móviles */
+  }
+  header h1 {
+    font-size: 1.6em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  section {
+    padding: 30px 15px;
+  }
+  section h2 {
+    font-size: 1.4em;
+  }
+  section p {
+    font-size: 1em;
+  }
+  .contact-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.categorias {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.categorias h2 {
+  font-size: 2em;
+  color: #004466;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  animation: fadeInDown 1.2s ease forwards;
+}
+
+.collages {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.collages figure {
+  position: relative;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transform: scale(0.95);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.collages figure:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.collages img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.6s ease;
+}
+
+.collages figure:hover img {
+  opacity: 0.9;
+}
+
+.collages figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,68,102,0.8);
+  color: #fff;
+  font-size: 1em;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+}
+
+.collages figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.portada {
+  text-align: center;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  padding: 40px 0;
+}
+
+.portada img {
+  width: 100%;          /* ocupa todo el ancho */
+  height: auto;         /* mantiene proporción */
+  max-height: 350px;    /* altura controlada */
+  object-fit: cover;    /* recorta proporcionalmente si sobra */
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.mensaje-portada {
+  margin-top: 20px;     /* texto debajo de la imagen */
+  color: #004466;
+  animation: fadeInText 2s ease forwards;
+}
+
+.mensaje-portada h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.mensaje-portada p {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+/* Animaciones */
+@keyframes fadeInZoom {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.diferenciadores {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.diferenciadores h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #004466;
+  animation: fadeInText 1.5s ease forwards;
+}
+
+.diferenciador {
+  display: inline-block;
+  width: 220px;
+  margin: 20px;
+  vertical-align: top;
+  animation: fadeInZoom 1.5s ease forwards;
+}
+
+.diferenciador img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.diferenciador img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.diferenciador h3 {
+  font-size: 1.1em;
+  margin-top: 12px;
+  color: #333;
+}
+
+/* Animaciones */
+@keyframes fadeInZoom {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.marketing img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  aspect-ratio: 16 / 6;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.marketing img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+.blog img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  aspect-ratio: 16 / 6;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.blog img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+/* Contenedor del formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Inputs y textarea */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Botón */
+form button {
+  margin-top: 16px;
+  padding: 14px;
+  background: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* Botón ocupa todo el ancho en móvil */
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #00337a;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  form input, form textarea {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+#servicios {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#servicios h2 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+#servicios ul {
+  list-style: none;
+  padding: 0;
+}
+
+#servicios li {
+  margin: 12px 0;
+  padding: 12px;
+  background: #fff;
+  border-left: 4px solid #004aad;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+#servicios li:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive para móvil */
+@media (max-width: 480px) {
+  #servicios {
+    padding: 15px;
+  }
+
+  #servicios h2 {
+    font-size: 1.4rem;
+  }
+
+  #servicios li {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
